@@ -1,5 +1,13 @@
+@import "../../styles/responsive.scss";
+
 .single {
     display: flex;
+
+    @include xl {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
 
     .view {
         flex: 1;
@@ -42,11 +50,19 @@
             height: 0;
             border: 1px solid grey;
             margin: 20px;
+
+            @include md {
+                display: none;
+            }
         }
         .chart {
             margin-top: 50px;
             width: 80%;
             height: 400px;
+
+            @include md {
+                display: none;
+            }
         }
     }
 
@@ -81,6 +97,10 @@
                     min-width: 480px;
                     padding: 15px;
                     background-color: #f45b6818;
+
+                    @include md {
+                        min-width: 250px;
+                    }
 
                     p {
                         margin-bottom: 5px;

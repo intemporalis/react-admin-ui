@@ -33,22 +33,7 @@ const pieChartBox = () => {
                     />
                 ))}
                 </Pie>
-                <Pie
-                data={data}
-                cx={420}
-                cy={200}
-                startAngle={180}
-                endAngle={0}
-                innerRadius={60}
-                outerRadius={80}
-                fill="#8884d8"
-                paddingAngle={5}
-                dataKey="value"
-                >
-                {data.map((item) => (
-                    <Cell key={item.name} fill={item.color} />
-                ))}
-                </Pie>
+                
             </PieChart>
             </ResponsiveContainer>
         </div>
