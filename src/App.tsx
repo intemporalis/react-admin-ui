@@ -13,8 +13,14 @@ import Menu from "./components/menu/Menu";
 import "./styles/global.scss"
 import Product from "./pages/product/Product.tsx";
 import User from "./pages/user/User.tsx";
+import {
+  QueryClient, QueryClientProvider
+} from "@tanstack/react-query";
+
 
 function App() {
+
+    const queryClient = new QueryClient();
 
     const Layout = () => {
       return (
@@ -25,7 +31,9 @@ function App() {
               <Menu/>
             </div>
             <div className="contentContainer">
-        <Outlet />
+            <QueryClientProvider client={queryClient}>
+              <Outlet />
+            </QueryClientProvider>
             </div>
           </div>
           <Footer/>
