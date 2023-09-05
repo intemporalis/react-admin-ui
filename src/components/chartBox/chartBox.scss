@@ -44,6 +44,17 @@
         .chart {
             height: 100%;
             width: 100%;
+
+            .recharts-default-tooltip {
+
+                @include xxl {
+                    font-size: 13px;
+                }
+
+                @include xl {
+                    font-size: 16px;
+                }
+            }
         }
 
         .texts{

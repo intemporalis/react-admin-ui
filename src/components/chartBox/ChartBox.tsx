@@ -28,10 +28,10 @@ const ChartBox = (props:Props) => {
             <div className="chart">
             <ResponsiveContainer width="99%" height="100%">
                 <LineChart data={props.chartData}>
-                <Tooltip
+                <Tooltip 
                 contentStyle={{background:"transparent", border:"none"}}
                 labelStyle={{display:"none"}}
-                position={{x:10,y:60}}
+                position={{x:-10,y:50}}                
                 />
                 <Line 
                   type="monotone" 
