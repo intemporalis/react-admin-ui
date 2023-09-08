@@ -17,6 +17,7 @@ a {
   background-color: $main-bg;
   color: $main-color;
   
+  
   @include sm {
     width: max-content;
   }
@@ -24,6 +25,7 @@ a {
 
 .container{
   display: flex;
+  min-height: 100vh;
 }
 
 .menuContainer{
